@@ -61,8 +61,10 @@ sudo start erdanielsdotcom
 ### Update site
 ```bash
 cd ~/erdanielsdotcom-config
-git pull
-git submodule update --init --recursive
+cd hugo
+git pull origin master
+git checkout master
+hugo
 sudo rm -rf /home/www/public_html
-sudo cp -r hugo /home/www/public_html
+sudo cp -r public /home/www/public_html
 ```
